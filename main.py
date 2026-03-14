@@ -27,7 +27,7 @@ def generate_password():
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
-    website = website_entry.get().strip()
+    website = website_entry.get().strip().title()
     email = email_entry.get().strip()
     password = password_entry.get().strip()
     if len(website) == 0 or len(password) == 0:
@@ -50,7 +50,7 @@ def save():
 
 
 def search():
-    website = website_entry.get().strip()
+    website = website_entry.get().strip().title()
     try:
         with open("data.json", "r") as data_file:
             data = json.load(data_file)
